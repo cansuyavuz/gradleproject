@@ -8,7 +8,9 @@ import java.io.IOException;
 import com.indvd00m.ascii.render.Render;
 import com.indvd00m.ascii.render.api.ICanvas;
 import com.indvd00m.ascii.render.api.IContextBuilder;
-import com.indvd00m.ascii.render.elements.PseudoText;
+import com.indvd00m.ascii.render.elements.Ellipse;
+//import com.indvd00m.ascii.render.elements.PseudoText;
+import com.indvd00m.ascii.render.elements.Rectangle;
 
 public class App {
 
@@ -18,7 +20,7 @@ public class App {
     public static void main(String[] args) throws IOException {
         System.out.println(new App().getGreeting());
 
-        // Ascii Render Example
+        /*  // Ascii Render Example
         Render render = new Render();
         IContextBuilder builder = render.newBuilder();
         builder.width(120).height(20);
@@ -27,7 +29,17 @@ public class App {
         ICanvas canvas = render.render(builder.build());
         String s = canvas.getText();
         System.out.println(s);
-
+        */
+        
+        //Eclipe Beispiel 
+		Render render = new Render();
+		IContextBuilder builder = render.newBuilder();
+		builder.width(20).height(10);
+		builder.element(new Rectangle());
+		builder.element(new Ellipse(9, 4, 14, 6));
+		ICanvas canvas = render.render(builder.build());
+		String s = canvas.getText();
+		System.out.println(s);
 
    //private static Render extracted(Render render) {
      //   return render;
@@ -35,4 +47,3 @@ public class App {
 }
 
 }
-

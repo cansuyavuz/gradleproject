@@ -17,6 +17,8 @@ repositories {
 
 dependencies {
     // Use JUnit Jupiter for testing.
+    testImplementation libs.junit.jupiter
+
     //testImplementation libs.junit.jupiter
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
     
@@ -29,7 +31,7 @@ dependencies {
     //added by cansu (build.gradle)
     implementation 'com.indvd00m.ascii.render:ascii-render:2.2.0'
     implementation 'org.apache.pdfbox:pdfbox:3.0.1'
-
+    implementation 'org.fusesource.jansi:jansi:2.4.1'   
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
